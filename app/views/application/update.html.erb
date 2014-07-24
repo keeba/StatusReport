@@ -1,0 +1,41 @@
+<style>
+textarea{
+  width:400px;
+  height:100px;
+}
+label{
+  float:left;
+}
+</style>
+<h3>Update Status for <%= @dailytask.date %></h3>
+<%= form_tag({controller: "application", action: "update"}, method: "post", ) do %>
+  <div style="width:400px;float:left;">
+    <p>
+      <%= label_tag(:accomplishments, "Accomplishments") %>
+      <%= text_area_tag(:accomplishments,@dailytask.accomplishments) %>
+    </p>
+    <p>
+      <%= label_tag(:plans, "Plans") %>
+      <%= text_area_tag(:plans,@dailytask.plans) %>
+    </p>
+    <p>
+      <%= label_tag(:issues, "Issues") %>
+      <%= text_area_tag(:issues,@dailytask.issues) %>
+    </p>
+  </div>
+  <div style="width:400px;float:right;">
+    <p>
+      <%= label_tag(:planned, "Plan for the Week") %>
+      <%= text_area_tag(:planned,@weeklytask.planned) %>
+    </p>
+    <p>
+      <%= label_tag(:backlogs, "Backlogs") %>
+      <%= text_area_tag(:backlogs,@weeklytask.backlogs) %>
+    </p>
+    <p>
+      <%= label_tag(:unplanned, "Unplanned") %>
+      <%= text_area_tag(:unplanned,@weeklytask.unplanned) %>
+    </p>
+  </div>
+  <input type="submit" name="save" value ="Save" style="width:100px;height:30px;font-size:4em;margin:20px 0px;float:right;">
+<% end %>

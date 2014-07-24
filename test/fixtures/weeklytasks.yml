@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 
+  week_no: 
+  user_id: 
+  planned: 
+
+two:
+  year: 
+  week_no: 
+  user_id: 
+  planned: 
